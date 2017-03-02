@@ -87,7 +87,7 @@
             "error"
         ],
         "valid-jsdoc": [
-            "warn", // TODO: Modificar para error
+            "warn", 
             {
                 "requireReturn" : false,
                 "requireReturnDescription": false,
@@ -96,7 +96,7 @@
                 }
             }
         ],
-        // melhores praticas
+        
         "block-scoped-var": [
             "error"
         ],
@@ -133,7 +133,7 @@
             "error"
         ],
         "no-eq-null": [
-            "off" // TODO: Estudar, pode ser necessário
+            "off" 
         ],
         "no-eval": [
             "error"
@@ -187,7 +187,7 @@
             "error"
         ],
         "no-param-reassign": [
-            "off" // utilizo técnicas de atribuição de valor default aos parâmetros
+            "off" 
         ],
         "no-proto": [
             "error"
@@ -211,7 +211,7 @@
             "error"
         ],
         "no-unused-expressions": [
-            "off" // dá erro com expect
+            "off" 
         ],
         "no-void": [
             "error"
@@ -226,7 +226,7 @@
             "error",
             "never"
         ],
-        // strict mode
+       
         "strict": [
             "error",
             "safe"
@@ -251,7 +251,7 @@
             "error"
         ],
         "no-undefined": [
-            "warn" // talvez fosse melhor resultar em erro uma vez que pode ser sinal de problemas
+            "warn"
         ],
         "no-unused-vars": [
             "error",
@@ -287,7 +287,7 @@
             "after"
         ],
         // stylistic
-        // Desativar e trocar pelo JSCS
+       
         "camelcase": [
             "error"
         ],
@@ -351,11 +351,7 @@
         "block-spacing": [
             "error",
             "always"
-        ],
-        // TODO: things that are nice to have as part of a build or via analysis tools like bithound. let's revisit.
-        // "valid-jsoc": [ "error" ],
-        // "complexity": [ "error" ],
-        // "no-else-return": [ "error" ]
+        ],     
         "consistent-this": [
             "error",
             "self"
