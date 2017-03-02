@@ -1,0 +1,397 @@
+{
+    "env": {
+        "browser": false,
+        "node": true,
+        "es6": false,
+        "mocha": true,
+        "commonjs": true
+    },
+    "globals": {
+        "Promise" : true,
+        "Map" : true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        // possible errors
+        "no-cond-assign": [
+            "error"
+        ],
+        "no-console": [
+            "warn" // permite para testes
+        ],
+        "no-constant-condition": [
+            "error"
+        ],
+        "no-control-regex": [
+            "error"
+        ],
+        "no-debugger": [
+            "error"
+        ],
+        "no-dupe-args": [
+            "error"
+        ],
+        "no-dupe-keys": [
+            "error"
+        ],
+        "no-duplicate-case": [
+            "error"
+        ],
+        "no-empty": [
+            "error"
+        ],
+        "no-empty-character-class": [
+            "error"
+        ],
+        "no-ex-assign": [
+            "error"
+        ],
+        "no-extra-boolean-cast": [
+            "error"
+        ],
+        "no-extra-semi": [
+            "error"
+        ],
+        "no-func-assign": [
+            "error"
+        ],
+        "no-invalid-regexp": [
+            "error"
+        ],
+        "no-irregular-whitespace": [
+            "error"
+        ],
+        "no-negated-in-lhs": [
+            "error"
+        ],
+        "no-reserved-keys": [
+            "off"
+        ],
+        "no-regex-spaces": [
+            "error"
+        ],
+        "no-sparse-arrays": [
+            "error"
+        ],
+        "no-unreachable": [
+            "error"
+        ],
+        "use-isnan": [
+            "error"
+        ],
+        "valid-typeof": [
+            "error"
+        ],
+        "valid-jsdoc": [
+            "warn", // TODO: Modificar para error
+            {
+                "requireReturn" : false,
+                "requireReturnDescription": false,
+                "prefer": {
+                    "return": "returns"
+                }
+            }
+        ],
+        // melhores praticas
+        "block-scoped-var": [
+            "error"
+        ],
+        "consistent-return": [
+            "error"
+        ],
+        "curly": [
+            "error",
+            "all"
+        ],
+        "default-case": [
+            "error"
+        ],
+        "dot-notation": [
+            "warn",
+            {
+                "allowKeywords": true
+            }
+        ],
+        "eqeqeq": [
+            "error",
+            "smart"
+        ],
+        "guard-for-in": [
+            "off"
+        ],
+        "no-alert": [
+            "error"
+        ],
+        "no-caller": [
+            "error"
+        ],
+        "no-div-regex": [
+            "error"
+        ],
+        "no-eq-null": [
+            "off" // TODO: Estudar, pode ser necessário
+        ],
+        "no-eval": [
+            "error"
+        ],
+        "no-extend-native": [
+            "error"
+        ],
+        "no-extra-bind": [
+            "error"
+        ],
+        "no-fallthrough": [
+            "error"
+        ],
+        "no-floating-decimal": [
+            "error"
+        ],
+        "no-implied-eval": [
+            "error"
+        ],
+        "no-iterator": [
+            "error"
+        ],
+        "no-labels": [
+            "error"
+        ],
+        "no-lone-blocks": [
+            "error"
+        ],
+        "no-loop-func": [
+            "error"
+        ],
+        "no-multi-spaces": [
+            "off"
+        ],
+        "no-native-reassign": [
+            "error"
+        ],
+        "no-new": [
+            "error"
+        ],
+        "no-new-func": [
+            "error"
+        ],
+        "no-new-wrappers": [
+            "error"
+        ],
+        "no-octal": [
+            "error"
+        ],
+        "no-octal-escape": [
+            "error"
+        ],
+        "no-param-reassign": [
+            "off" // utilizo técnicas de atribuição de valor default aos parâmetros
+        ],
+        "no-proto": [
+            "error"
+        ],
+        "no-redeclare": [
+            "error"
+        ],
+        "no-return-assign": [
+            "error"
+        ],
+        "no-script-url": [
+            "error"
+        ],
+        "no-self-compare": [
+            "error"
+        ],
+        "no-sequences": [
+            "error"
+        ],
+        "no-throw-literal": [
+            "error"
+        ],
+        "no-unused-expressions": [
+            "off" // dá erro com expect
+        ],
+        "no-void": [
+            "error"
+        ],
+        "no-with": [
+            "error"
+        ],
+        "wrap-iife": [
+            "error"
+        ],
+        "yoda": [
+            "error",
+            "never"
+        ],
+        // strict mode
+        "strict": [
+            "error",
+            "safe"
+        ],
+        // variables
+        "no-catch-shadow": [
+            "error"
+        ],
+        "no-delete-var": [
+            "error"
+        ],
+        "no-shadow": [
+            "error" 
+        ],
+        "no-shadow-restricted-names": [
+            "error"
+        ],
+        "no-undef": [
+            "error"
+        ],
+        "no-undef-init": [
+            "error"
+        ],
+        "no-undefined": [
+            "warn" // talvez fosse melhor resultar em erro uma vez que pode ser sinal de problemas
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "none"
+            }
+        ],
+        "no-use-before-define": [
+            "error",
+            "nofunc"
+        ],
+        // node.js
+        "handle-callback-err": [
+            "error",
+            "^.*(e|E)rr"
+        ],
+        "no-mixed-requires": [
+            "error"
+        ],
+        "no-new-require": [
+            "error"
+        ],
+        "no-path-concat": [
+            "error"
+        ],
+        "no-process-exit": [
+            "off"
+        ],
+        // ES6
+        "generator-star-spacing": [
+            "error",
+            "after"
+        ],
+        // stylistic
+        // Desativar e trocar pelo JSCS
+        "camelcase": [
+            "error"
+        ],
+        "comma-dangle": [
+            "warn"
+        ],
+        "key-spacing": [
+            "warn"
+        ],
+        "no-lonely-if": [
+            "error"
+        ],
+        "no-multi-str": [
+            "warn"
+        ],
+        "no-underscore-dangle": [
+            "off"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "space-infix-ops": [
+            "error"
+        ],
+        "space-return-throw-case": [
+            "off"
+        ],
+        "no-array-constructor": [
+            "error"
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "never"
+        ],
+        "no-nested-ternary": [
+            "error"
+        ],
+        "no-new-object": [
+            "error"
+        ],
+        "dot-location": [
+            "error",
+            "property"
+        ],
+        "linebreak-style": [
+            "off",
+            "windows"
+        ],
+        "indent": [
+            "warn",
+            "tab",
+            {
+                "SwitchCase" : 1
+            }
+        ],
+        "block-spacing": [
+            "error",
+            "always"
+        ],
+        // TODO: things that are nice to have as part of a build or via analysis tools like bithound. let's revisit.
+        // "valid-jsoc": [ "error" ],
+        // "complexity": [ "error" ],
+        // "no-else-return": [ "error" ]
+        "consistent-this": [
+            "error",
+            "self"
+        ],
+        "new-cap": [
+            "error"
+        ],
+        "new-parens": [
+            "error"
+        ],
+        "no-unneeded-ternary": [
+            "error"
+        ],
+        "no-whitespace-before-property": [
+            "error"
+        ],
+        "require-jsdoc": [
+            "warn",
+            {
+                "require": {
+                    "FunctionDeclaration": true,
+                    "MethodDefinition": true,
+                    "ClassDeclaration": true
+                }
+            }
+        ],
+        "space-in-parens": [
+            "error",
+            "never"
+        ],
+        "space-unary-ops": [
+            "error",
+            {
+                "words": true,
+                "nonwords": false
+            }
+        ]
+    }
+}
