@@ -11,7 +11,7 @@ describe("Authentication service", () => {
 	let log = sinon.createStubInstance(Bunyan);
 	let tokenSample = "";
 
-	beforeEach("create mock user", () => {
+	beforeEach("create mock token", () => {
 		tokenSample = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiMTk4MmU0Zi0xZmU1LTRjY2EtYmU4Yy1jODU3MzUwMmVlZmMiLCJleHAiOjE0ODg0OTgwNTcsInVpZCI6InVzZXIgaWQiLCJpYXQiOjE0ODg0OTc4MTh9.Lii9tmwaNWUoWMlZD-LsB_SY8hzXE6H2R958RvbqswOQJc2IDOCa3my-Puv5uP2q7VwMdS351SZTdCPL-QLbWMojo-PmgNEHKsuhiFftpT85R9uZ6bWLqvqrVgvykkJrTZ_fstZQ2poiltRhpEpo29b4qkQXjRqJnxop-hERhNw";
 	});
 
