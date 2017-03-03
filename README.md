@@ -1,7 +1,5 @@
-# simple-web-token-authentication
 
-
-# Seed Project for a NodeJS JWT autenticationa
+# Seed Project for a NodeJS JWT autentication
 This is a seed project for Json Web Token autenticationa with NodeJs. It expose  REST APIs for JWT Authentication.
 
 ## Features
