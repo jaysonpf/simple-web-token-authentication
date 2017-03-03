@@ -1,6 +1,6 @@
 
-# Seed Project for a NodeJS JWT authentication
-This is a seed project for Json Web Token autenticationa with NodeJs. It expose  REST APIs for JWT Authentication.
+# Seed Project for a NodeJS Jwt based authentication
+This is a seed project for Json Web Token based autenticationa with NodeJs. It expose  REST APIs for create, verify and revoke Jwt .
 
 ## Features
 - Test  is automated using Gulp.
