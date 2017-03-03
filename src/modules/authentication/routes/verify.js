@@ -1,9 +1,9 @@
 let AuthenticationService = require("../business/authentication-service");
 
 /**
- * Handles sign requests * 
+ * Handles verify requests * 
  */
-function signIn(req, res, next) {
+function verify(req, res, next) {
 
 	let authenticationService = new AuthenticationService(req.log);
 
@@ -21,4 +21,4 @@ function signIn(req, res, next) {
 }
 
 
-module.exports = signIn;
+module.exports = verify;
