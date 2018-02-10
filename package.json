@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node node_modules/gulp/bin/gulp.js test",
-    "start" : "node src/index.js"
+    "start": "node src/index.js  | ./node_modules/.bin/bunyan"
   },
   "keywords": [
     "jwt",
@@ -27,7 +27,7 @@
   "dependencies": {
     "jsonwebtoken": "7.3.0",
     "mongoose": "4.5.0",
-    "restify": "4.0.4",
+    "restify": "4.3.0",
     "uuid": "^3.0.1"
   }
 }
