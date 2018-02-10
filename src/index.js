@@ -5,10 +5,15 @@ const singIn = require("./modules/authentication/routes/sign-in");
 const singOut = require("./modules/authentication/routes/sign-out");
 const verify = require("./modules/authentication/routes/verify");
 
-let log = bunyan.createLogger({ name: "simple-web-token-authentication", level: "debug" });
+let log = bunyan.createLogger({
+	name: "simple-web-token-authentication",
+	level: "debug",
+	serializers: {
+		err: bunyan.stdSerializers.err
+	}
+});
 
 log.info("starting server... ");
-
 
 mongoose.connect("mongodb://localhost/test", err => {
 	if (err) {
@@ -23,7 +28,9 @@ mongoose.connect("mongodb://localhost/test", err => {
 	};
 	let server = restify.createServer(serverOptions);
 	server.use(restify.queryParser());
-	server.use(restify.bodyParser({ mapParams: false }));
+	server.use(restify.bodyParser({
+		mapParams: false
+	}));
 
 	server.post("sign-in", singIn);
 	server.post("sign-out", singOut);
@@ -33,7 +40,5 @@ mongoose.connect("mongodb://localhost/test", err => {
 	server.listen(serverOptions.port, function () {
 		log.info("%s listening at %s", server.name, server.url);
 	});
-
-
 
 });
