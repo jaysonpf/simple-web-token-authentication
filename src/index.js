@@ -15,20 +15,16 @@ let log = bunyan.createLogger({
 
 log.info("starting server... ");
 
-mongoose.connect("mongodb://localhost/test", err => {
-	if (err) {
-		log.error("error establishing a database connection");
-		process.exit(1);
-	}
-
+mongoose.connect("mongodb://localhost:27017/token-test", {useNewUrlParser: true} )
+.then(()=>{
 	let serverOptions = {
 		name: "simple-web-token-authentication",
 		port: 8085,
-		log: log
+		log: log		
 	};
 	let server = restify.createServer(serverOptions);
-	server.use(restify.queryParser());
-	server.use(restify.bodyParser({
+	server.use(restify.plugins.queryParser());
+	server.use(restify.plugins.bodyParser({
 		mapParams: false
 	}));
 
@@ -41,4 +37,9 @@ mongoose.connect("mongodb://localhost/test", err => {
 		log.info("%s listening at %s", server.name, server.url);
 	});
 
+})
+.catch(err =>{
+
+	log.error("error establishing a database connection", err);
+		process.exit(1);
 });
