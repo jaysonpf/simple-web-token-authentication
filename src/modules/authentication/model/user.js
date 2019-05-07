@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const COLLECTION_NAME = "User";
 
-const schemaUser = mongoose.model(COLLECTION_NAME, new Schema({
+const schemaUser = new Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
@@ -14,7 +14,7 @@ const schemaUser = mongoose.model(COLLECTION_NAME, new Schema({
     }],
     createDate: { type: Date, default: Date },
     lastUpdate: { type: Date, default: Date }   
-}));
+});
 
 let model = mongoose.model(COLLECTION_NAME, schemaUser);
 
