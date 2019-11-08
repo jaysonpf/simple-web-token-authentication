@@ -9,14 +9,12 @@ let mocha = require("gulp-mocha");
  *   Path to look for tests files
  * @returns {Object}
  */
-function execTests(path) {
-    return gulp.src(path, { read: true })
-        .pipe(mocha({
-            ui: "bdd"           
-        }));
-}
 
-gulp.task("test", [], () => {
-    return execTests("./test/**/*.spec.js");
+
+exports.default =   gulp.task("test", () => {
+    return gulp.src('./test/**/*.spec.js', { read: true })
+        .pipe(mocha({
+            ui: "bdd"
+        }));
 });
 
