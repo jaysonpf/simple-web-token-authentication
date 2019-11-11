@@ -1,3 +1,4 @@
+[![Build Status](https://api.cirrus-ci.com/github/jaysonpf/simple-web-token-authentication.svg)](https://cirrus-ci.com/github/jaysonpf/simple-web-token-authentication)
 
 # Seed Project for a NodeJS Jwt based authentication
 This is a seed project for Json Web Token based autenticationa with NodeJs. It expose  REST APIs for create, verify and revoke Jwt .
